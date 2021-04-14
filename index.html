@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,64 +7,116 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kateřina Táborská</title>
     <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
 
     <header class="header header--sticky">
+
+        <h1 class="logo">Kateřina Táborská</h1>
         
-            <ul class="nav nav--highlighted">
-                <li class="nav__item">O mně</li>
-                <li class="nav__item">Pracovní zkušenosti</li>
-                <li class="nav__item">Napiště mi</li>
-            </ul>
+        <ul class="nav">
+            <li class="nav__item">
+                <a class="nav__item--link" href="#omne">O mně</a>
+            </li>
+
+            <li class="nav__item">
+                <a class="nav__item--link" href="#workexperience">Pracovní zkušenosti</a>
+            </li>
+        </ul>
 
     </header>
 
-    <section class="introduction">
-
-        <p class="introduction__short-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui suscipit, laborum cumque incidunt velit odio officiis natus? Soluta, ullam, quasi ipsa doloribus expedita suscipit eaque quos sed eveniet, ipsam unde.</p>
-    
-        <div class="introduction__contact introduction__contact--highlighted">
-            <p>Email</p>
-            <p>Telefon</p>
-            <p>LinkedIn</p>
-        </div>
-
-        <img class="introduction__photo" src="foto/profile photo.jpg">
-    
-        <button class="introduction__CV-btn">Stáhnout CV</button>
-       
-    </section>
-
-    <section class="about">
-
-        <h2 class="about__heading about__heading--bold">O mně</h2>
-
-        <p class="about__personal-info about__personal-info--text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam veritatis nisi corrupti! Illo consequuntur, ratione, repudiandae enim a praesentium natus qui debitis cupiditate voluptatibus similique, at quos delectus consectetur dolorem.</p>
-    
-        <p class="about__skills about__skills--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime tempore, unde eaque nam, quasi aspernatur dolore tempora rerum provident labore tenetur quo. Accusantium consequuntur recusandae vel deleniti iure voluptas id!</p>
-        </div>
-
-    </section>
-
-    <section class="experience">
-
-        <h2 class="experience__heading experiance__heading--bold">Zkušenosti</h2>
-
-        <p class="experience__work experience__work--text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio, adipisci, fugit odit, explicabo fugiat obcaecati dolorem et ipsum dolorum eveniet necessitatibus corporis architecto rem. Vero cumque repudiandae nostrum ab ullam?</p>
-    
-        <p class="experience__course experience__course--text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est quasi quae hic et harum sapiente accusantium? Iure voluptate ipsam provident temporibus magni, nihil, doloremque porro, veritatis eos dolorum ex vel!</p>
-      
-    </section>
-
-
-    <section class="get-in-touch">
-
-        <form class="get-in-touch__form get-in-touch__form--highlighted">
-        </form>
+    <div class="content">
         
-    </section>
- 
+        <section class="introduction">
+
+            <div class="personal-card">
+
+                <div class="short-info">
+                        
+                    <p class="short-info__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui suscipit, laborum cumque incidunt velit odio officiis natus? Soluta, ullam, quasi ipsa doloribus expedita suscipit eaque quos sed eveniet, ipsam unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laudantium repellendus assumenda enim. Optio facilis, aliquam debitis perspiciatis sunt cum ducimus error, asperiores dolores non esse cumque laboriosam, vel dicta.</p>
+                    
+                    <div class="contact contact--highlighted">
+                            
+                        <div class="email">
+                            <img class="email__icon" src="foto/email.svg">
+                            <a class="email__odkaz" href="mailto:ktaborska92@gmail.com">ktaborska92@gmail.com</a>
+                        </div>
+
+                        <div class="phone">
+                            <img class="phone__icon" src="foto/phone.svg">
+                            <p class="phone__text">+420 603 720 073</p>
+                        </div>
+
+                        <div class="linkedin">
+                            <img class="linkedin__icon" src="foto/linkedin.svg">
+                            <a class="linkedin__odkaz" href="https://www.linkedin.com/in/kate%C5%99ina-t%C3%A1borsk%C3%A1-87358a164/">Kateřina Táborská</a>
+                        </div>
+                            
+                    </div>
+
+                </div>
+
+                <div class="short-info">
+                    <img class="short-info__photo" src="foto/profile photo.jpg">
+                    <button class="short-info__CV-btn short-info__CV-btn--highlighted">Stáhnout CV</button>
+                </div>
+            
+            </div>
+        
+        </section>
+
+        <section id="omne" class="about-me">
+
+            <h2 class="about-me__heading">O mně</h2>
+
+            <div class="career" >
+                
+                <p class="career__short-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam veritatis nisi corrupti! Illo consequuntur, ratione, repudiandae enim a praesentium natus qui debitis cupiditate voluptatibus similique, at quos delectus consectetur dolorem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus id quasi omnis itaque, minima enim tenetur, ipsum perferendis mollitia harum nostrum repellat error commodi autem vitae aut rerum officia deserunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure porro sequi unde? Necessitatibus nisi eaque delectus sit at sed nulla molestiae dolorem voluptatibus vitae! Tenetur vitae laboriosam perferendis nulla earum?</p>
+
+                <ul class="skills skills--highlighted">
+                    <li class="skills__item">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="skills__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="skills__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="skills__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="skills__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                </ul>
+          
+            </div>
+
+        </section>
+
+
+        <section id="workexperience" class="about-me">
+
+            <h2 class="about-me__heading">Pracovní zkušenosti</h2>
+
+            <div class="experience">
+
+                <ul class="dates">
+                    <li class="dates__item" >zaří 2019 - nyní</li>
+                    <li class="dates__item">říjen 2018 - srpen 2019</li>
+                    <li class="dates__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="dates__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="dates__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                </ul>
+
+                <ul class="place">
+                    <li class="place__item">Mateřská dovolená</li>
+                    <li class="place__item">Proficomms</li>
+                    <li class="place__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="place__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="place__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                </ul>
+            </div>
+
+        </section>
+
+    </div>
+
 </body>
 </html>
