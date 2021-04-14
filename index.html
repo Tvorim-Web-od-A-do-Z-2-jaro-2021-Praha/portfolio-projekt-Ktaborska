@@ -1,16 +1,122 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cvičení 1</title>
+    <title>Kateřina Táborská</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
-    <H1>Cvičení 1 - git + github classroom</H1>
 
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum excepturi vel quidem cupiditate consequuntur, sit repellendus nemo ipsum sequi libero doloribus beatae vero. Placeat ipsa porro unde eaque architecto aliquid!</p>
+    <header class="header header--sticky">
 
-    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error adipisci minima quae accusantium porro inventore rem ex quibusdam, facere enim vel, expedita dicta repellendus ratione atque quia impedit quam! Unde.</p>
+        <h1 class="logo">Kateřina Táborská</h1>
+        
+        <ul class="nav">
+            <li class="nav__item">
+                <a class="nav__item--link" href="#omne">O mně</a>
+            </li>
+
+            <li class="nav__item">
+                <a class="nav__item--link" href="#workexperience">Pracovní zkušenosti</a>
+            </li>
+        </ul>
+
+    </header>
+
+    <div class="content">
+        
+        <section class="introduction">
+
+            <div class="personal-card">
+
+                <div class="short-info">
+                        
+                    <p class="short-info__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui suscipit, laborum cumque incidunt velit odio officiis natus? Soluta, ullam, quasi ipsa doloribus expedita suscipit eaque quos sed eveniet, ipsam unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laudantium repellendus assumenda enim. Optio facilis, aliquam debitis perspiciatis sunt cum ducimus error, asperiores dolores non esse cumque laboriosam, vel dicta.</p>
+                    
+                    <div class="contact contact--highlighted">
+                            
+                        <div class="email">
+                            <img class="email__icon" src="foto/email.svg">
+                            <a class="email__odkaz" href="mailto:ktaborska92@gmail.com">ktaborska92@gmail.com</a>
+                        </div>
+
+                        <div class="phone">
+                            <img class="phone__icon" src="foto/phone.svg">
+                            <p class="phone__text">+420 603 720 073</p>
+                        </div>
+
+                        <div class="linkedin">
+                            <img class="linkedin__icon" src="foto/linkedin.svg">
+                            <a class="linkedin__odkaz" href="https://www.linkedin.com/in/kate%C5%99ina-t%C3%A1borsk%C3%A1-87358a164/">Kateřina Táborská</a>
+                        </div>
+                            
+                    </div>
+
+                </div>
+
+                <div class="short-info">
+                    <img class="short-info__photo" src="foto/profile photo.jpg">
+                    <button class="short-info__CV-btn short-info__CV-btn--highlighted">Stáhnout CV</button>
+                </div>
+            
+            </div>
+        
+        </section>
+
+        <section id="omne" class="about-me">
+
+            <h2 class="about-me__heading">O mně</h2>
+
+            <div class="career" >
+                
+                <p class="career__short-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam veritatis nisi corrupti! Illo consequuntur, ratione, repudiandae enim a praesentium natus qui debitis cupiditate voluptatibus similique, at quos delectus consectetur dolorem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus id quasi omnis itaque, minima enim tenetur, ipsum perferendis mollitia harum nostrum repellat error commodi autem vitae aut rerum officia deserunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure porro sequi unde? Necessitatibus nisi eaque delectus sit at sed nulla molestiae dolorem voluptatibus vitae! Tenetur vitae laboriosam perferendis nulla earum?</p>
+
+                <ul class="skills skills--highlighted">
+                    <li class="skills__item">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="skills__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="skills__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="skills__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="skills__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                </ul>
+          
+            </div>
+
+        </section>
+
+
+        <section id="workexperience" class="about-me">
+
+            <h2 class="about-me__heading">Pracovní zkušenosti</h2>
+
+            <div class="experience">
+
+                <ul class="dates">
+                    <li class="dates__item" >zaří 2019 - nyní</li>
+                    <li class="dates__item">říjen 2018 - srpen 2019</li>
+                    <li class="dates__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="dates__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="dates__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                </ul>
+
+                <ul class="place">
+                    <li class="place__item">Mateřská dovolená</li>
+                    <li class="place__item">Proficomms</li>
+                    <li class="place__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="place__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                    <li class="place__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                </ul>
+            </div>
+
+        </section>
+
+    </div>
+
 </body>
 </html>
