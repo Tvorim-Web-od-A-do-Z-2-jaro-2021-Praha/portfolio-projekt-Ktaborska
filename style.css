@@ -4,8 +4,8 @@ body{
 }
 
 header{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 100px auto 1fr;
     margin: 0 50px;
     border-bottom: 1px solid;
     background-color: #ffe8d5;
@@ -17,56 +17,64 @@ header{
     top: 0;
 }
 
-.logo{ 
+.header__photo-of-me{
+   width: 100%;
+    border-radius: 50%;
+    place-self: center center;
+}
+
+.header__name{ 
     font-family: 'Nunito', sans-serif;
+    font-size: 30px;
     padding: 20px;
     margin: 0;
+    color: #0a0808b7;
+    align-self: center;
+}
+
+.nav{
+    padding-left: 0;
+    justify-self: end;
+    margin: 25px 0;
 }
 
 .nav__item{
     display: inline-block;
-    padding:20px;
+    padding: 20px;
     font-family: 'Nunito', sans-serif;
     font-size: 20px;
     margin: 0;
-    font-weight: bold;
 }
 
-.nav__item--link:hover{
-    color:#ce8a89;
+.nav__link{
     text-decoration: none;
- }
- 
- .nav__item--link{
-     text-decoration: none;
-     color: black;
+    color: #000000;
+}
+
+.nav__link:hover{
+    font-weight: bold;
  }
 
 .content{
-   padding: 100px 150px;  
+   padding: 100px 200px 15px 200px;  
     z-index: 5;
 }
 
 .introduction{
-    position: relative;
-    padding-bottom: 100px;
+    padding-bottom: 75px;
     border-bottom: 1px solid grey;
 }
 
 .personal-card{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10%;
 }
 
 .short-info{
-    flex-basis: 50%;
-    margin-right: 100px;
-}
-
-.short-info__text{
     font-family: 'Poppins', sans-serif;
     text-align: justify;
     margin: 0;
-    margin-bottom: 50px;
 }
 
 .contact--highlighted{
@@ -76,20 +84,28 @@ header{
 .email,
 .phone,
 .linkedin{
-    display: flex;
-    padding: 25px;
+    padding: 10px;
+    display:grid;
+    grid-template-areas: 
+    "icon email"
+    "icon phone"
+    "icon linkedin";
+    grid-template-columns: 30% 1fr;
+    align-items: center;
+    column-gap: 5%;
 }
 
 .phone__icon,
 .email__icon,
 .linkedin__icon{
-    width: 5%;
+    max-width: 15%;
+    justify-self: end;
 }
 
 .phone__text{
-    display: inline;
     font-family: 'Poppins', sans-serif;
     margin: 16px;
+    justify-self: start;
 }
 
 .email__odkaz,
@@ -98,58 +114,54 @@ header{
     font-family: 'Poppins', sans-serif;
     color: black;
     margin: 16px;
+    justify-self: start;
 }
 
-.short-info__photo{
-    flex-basis:50%;
-    width: 90%;
-    height: 90%;
-    align-self: center;
-}
-
-.short-info__CV-btn{
-    position: absolute;
-    right:50px;
-    bottom:125px;
-    padding: 25px;
+.CV-btn{
+    padding: 20px 40px;
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
+    position: relative;
+    right:30px;
+    bottom:15px;
 }
 
-.short-info__CV-btn--highlighted{
-    background-color:#e0b1af;
-    border: none;
-    border-radius: 2%;
-}
-
-.career{
-    display: flex;
-}
-
-.career__short-info{
-    flex-basis: 50%;
-    margin-right: 100px;
-    text-align: justify;
-    font-family: 'Poppins', sans-serif;
-
-}
-
-.skills{
-    flex-basis: 50%;
+.CV-btn--highlighted{
+    border: 1px solid grey;
 }
 
 .about-me{
-    padding:50px 0;
+    padding:75px 0;
     border-bottom: 1px solid grey;
 }
 
 .about-me__heading{
-    font-family: 'Nunito', sans-serif;
-    margin: 25px 0;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    margin-bottom:25px;
+}
+
+.career{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10%;
 }
 
 .career__short-info{
     font-family: 'Poppins', sans-serif;
+    text-align: justify;
+    margin: 0;
+}
+
+.work-experience{
+    padding:75px 0;
+    border-bottom: 1px solid grey;
+}
+
+.work-experience__heading{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    margin-bottom:25px;
 }
 
 .skills{
@@ -161,43 +173,158 @@ header{
 }
 
 .skills__item{
-    padding:15px
+    padding:20px
 }
 
 .experience__heading{
     font-family: 'Nunito', sans-serif;
-    margin: 25px 0;
+    margin: 0;
+    margin-bottom:25px;
 }
 
-.experience{
-    display: flex;
-    
+.work__experience-1,
+.work__experience-2{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 10%;
+    margin-bottom: 50px;
 }
 
-.dates{
-    flex-basis: 50%; 
-    padding: 0;
-}
-
-.place{
-    flex-basis: 50%;
-    padding: 0;
-}
-
-.dates__item{
+.work__experience-item{
     font-family: 'Poppins', sans-serif;
-    padding:15px;
+    padding:5px;
     padding-left: 0;
     list-style-type:none;
 }
 
-.place__item{
-    font-family: 'Poppins', sans-serif;
-    padding:15px;
-    padding-left: 0;
-    list-style-type:none;
+.get-in-touch{
+    padding: 75px 0;
+    border-bottom: 1px solid grey;
+    position: relative; 
 }
 
+.get-in-touch__form{
+    display: grid;
+    grid-template-areas: 
+    "name email"
+    "phone subject"
+    "text text";
+}
+
+.get-in-touch__heading{
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    margin-bottom:25px;
+}
+
+#name{
+    grid-area: name;
+    padding: 20px;
+    margin: 10px 10px 10px 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+#email{
+    grid-area:email; 
+    padding: 20px;
+    margin: 10px 10px 10px 0;
+    font-family: 'Nunito', sans-serif; 
+}
+
+#phone{
+    grid-area: phone;
+    padding: 20px;
+    margin: 10px 10px 10px 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+#subject{
+    grid-area: subject;
+    padding: 20px;
+    margin: 10px 10px 10px 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+#text{
+    grid-area: text;
+    padding: 20px;
+    font-family: 'Nunito', sans-serif;
+    margin: 10px 10px 10px 0;
+}
+
+.form-btn{
+    grid-column-start: 1;
+    justify-self: left;
+    padding: 20px 40px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    margin: 20px 20px 20px 0;
+}
+
+.footer__text{
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+@media screen and (max-width: 1000px){
+
+    .content{
+        padding:0 50px;
+    }
+
+    header{
+        margin:0;  
+    }
+
+    .header--sticky{
+        position: relative;
+    }
+
+    .header__photo-of-me{
+        max-width: 25%;
+        padding: 25px;
+        grid-column-end: span 3;
+    }
+
+    .header__name{
+        padding: 0;
+        text-align: center;
+        grid-column-end: span 3;
+    }
+
+    .nav{
+        padding:0;
+        grid-column-end: span 3;
+        justify-self: center;
+
+    }
+
+    .nav__item{
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .introduction{
+        margin-top:75px;
+    }
+
+    .get-in-touch__form{
+        justify-content: stretch;
+        grid-template-areas: 
+        "name"
+        "email"
+        "phone"
+        "subject"
+        "text";
+        grid-template-columns:100%
+    }
+}
+
+
+
+
+
+  
 
 
 
