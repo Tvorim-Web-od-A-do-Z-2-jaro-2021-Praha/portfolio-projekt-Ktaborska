@@ -16,15 +16,21 @@
 
     <header class="header header--sticky">
 
-        <h1 class="logo">Kateřina Táborská</h1>
-        
+         <img class="header__photo-of-me" src="foto/profile photo.jpg">
+       
+        <h1 class="header__name">Kateřina Táborská</h1>
+    
         <ul class="nav">
             <li class="nav__item">
-                <a class="nav__item--link" href="#omne">O mně</a>
+                <a class="nav__link" href="#omne">O mně</a>
             </li>
 
             <li class="nav__item">
-                <a class="nav__item--link" href="#workexperience">Pracovní zkušenosti</a>
+                <a class="nav__link" href="#workexperience">Pracovní zkušenosti</a>
+            </li>
+
+            <li class="nav__item">
+                <a class="nav__link" href="#getintouch">Napište mi</a>
             </li>
         </ul>
 
@@ -35,13 +41,12 @@
         <section class="introduction">
 
             <div class="personal-card">
-
-                <div class="short-info">
                         
-                    <p class="short-info__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui suscipit, laborum cumque incidunt velit odio officiis natus? Soluta, ullam, quasi ipsa doloribus expedita suscipit eaque quos sed eveniet, ipsam unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laudantium repellendus assumenda enim. Optio facilis, aliquam debitis perspiciatis sunt cum ducimus error, asperiores dolores non esse cumque laboriosam, vel dicta.</p>
-                    
+                <p class="short-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui suscipit, laborum cumque incidunt velit odio officiis natus? Soluta, ullam, quasi ipsa doloribus expedita suscipit eaque quos sed eveniet, ipsam unde. Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi laudantium repellendus assumenda enim. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, distinctio cum repellat officia tempore ut similique quo deserunt praesentium rem sunt minus laudantium ipsa saepe at eveniet eos repellendus magni.</p>
+
+                <div class="position-btn">
                     <div class="contact contact--highlighted">
-                            
+                                
                         <div class="email">
                             <img class="email__icon" src="foto/email.svg">
                             <a class="email__odkaz" href="mailto:ktaborska92@gmail.com">ktaborska92@gmail.com</a>
@@ -55,19 +60,15 @@
                         <div class="linkedin">
                             <img class="linkedin__icon" src="foto/linkedin.svg">
                             <a class="linkedin__odkaz" href="https://www.linkedin.com/in/kate%C5%99ina-t%C3%A1borsk%C3%A1-87358a164/">Kateřina Táborská</a>
-                        </div>
-                            
+                        </div>   
+
                     </div>
 
+                    <button class="CV-btn CV-btn--highlighted"> Stáhnout CV</button>
                 </div>
 
-                <div class="short-info">
-                    <img class="short-info__photo" src="foto/profile photo.jpg">
-                    <button class="short-info__CV-btn short-info__CV-btn--highlighted">Stáhnout CV</button>
-                </div>
-            
             </div>
-        
+   
         </section>
 
         <section id="omne" class="about-me">
@@ -76,11 +77,10 @@
 
             <div class="career" >
                 
-                <p class="career__short-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam veritatis nisi corrupti! Illo consequuntur, ratione, repudiandae enim a praesentium natus qui debitis cupiditate voluptatibus similique, at quos delectus consectetur dolorem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus id quasi omnis itaque, minima enim tenetur, ipsum perferendis mollitia harum nostrum repellat error commodi autem vitae aut rerum officia deserunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure porro sequi unde? Necessitatibus nisi eaque delectus sit at sed nulla molestiae dolorem voluptatibus vitae! Tenetur vitae laboriosam perferendis nulla earum?</p>
+                <p class="career__short-info">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam veritatis nisi corrupti! Illo consequuntur, ratione, repudiandae enim a praesentium natus qui debitis cupiditate voluptatibus similique, at quos delectus consectetur dolorem. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minus id quasi omnis itaque, minima enim tenetur, ipsum perferendis mollitia harum nostrum repellat error commodi autem vitae aut rerum officia deserunt? Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure porro sequi unde? Necessitatibus nisi eaque delectus sit at sed nulla molestiae dolorem voluptatibus vitae! Tenetur vitae laboriosam perferendis nulla earum?lorem</p>
 
                 <ul class="skills skills--highlighted">
                     <li class="skills__item">Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                    <li class="skills__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
                     <li class="skills__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
                     <li class="skills__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
                     <li class="skills__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
@@ -91,32 +91,84 @@
         </section>
 
 
-        <section id="workexperience" class="about-me">
+        <section id="workexperience" class="work-experience">
 
-            <h2 class="about-me__heading">Pracovní zkušenosti</h2>
+            <h2 class="work-experience__heading">Pracovní zkušenosti</h2>
 
-            <div class="experience">
+                <div class="work__experience-1">
+                    <span class="work__experience-item" >zaří 2019 - nyní</span>
+                    <div class="work__experience-item">Mateřská dovolená</div>
+                </div>
 
-                <ul class="dates">
-                    <li class="dates__item" >zaří 2019 - nyní</li>
-                    <li class="dates__item">říjen 2018 - srpen 2019</li>
-                    <li class="dates__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                    <li class="dates__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                    <li class="dates__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                </ul>
-
-                <ul class="place">
-                    <li class="place__item">Mateřská dovolená</li>
-                    <li class="place__item">Proficomms</li>
-                    <li class="place__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                    <li class="place__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                    <li class="place__item" >Lorem ipsum dolor sit amet consectetur adipisicing.</li>
-                </ul>
-            </div>
-
+                <div class="work__experience-2">
+                    <span class="work__experience-item">říjen 2018 - srpen 2019</span>
+                    <div class="work__experience-item">Proficomms</div>
+                </div>
+            
         </section>
+
+        <section id="getintouch" class="get-in-touch">
+
+            <h2 class="get-in-touch__heading">Napište mi ...</h2>
+
+            <form class="get-in-touch__form">
+
+                    <label for="name"></label>
+                    <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Jméno"
+                        required
+                    >
+
+                    <label for="email"></label>
+                    <input
+                        type="email"
+                        name="email"
+                        id="email"
+                        placeholder="Email"
+                    >
+        
+                    <label for="phone number"></label>
+                    <input
+                        type="tel"
+                        name="phone"
+                        id="phone"
+                        placeholder="Telefonní číslo"
+                        required
+                    >
+                        
+                    <label for="subject"></label>
+                        <input
+                            type="text"
+                            name="subject"
+                            id="subject"
+                            placeholder="Předmět"
+                            required
+                        >
+                
+                    <label for="text"></label>
+                        <textarea 
+                            name="text" 
+                            id="text" 
+                            cols="10" 
+                            rows="10"
+                        >
+                        </textarea>
+    
+                    <button class="form-btn" type="submit" value="odesláno" name="send" id="send">Odeslat</button>
+            </form>
+
+            
+        </section
 
     </div>
 
+    <footer class="footer">
+        <p class="footer__text">Copyright © 2020 | Kateřina Táborská</p>
+    </footer>
+
 </body>
+
 </html>
