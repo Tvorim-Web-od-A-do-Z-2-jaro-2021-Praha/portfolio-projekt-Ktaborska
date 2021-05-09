@@ -1,337 +1,348 @@
-body{
-    margin:0;
-    background-color: #ffe8da;
+body {
+  margin: 0;
+  background-color: #ffe8da;
 }
 
-header{
-    display: grid;
-    grid-template-columns: 100px auto 1fr;
-    margin: 0 50px;
-    border-bottom: 1px solid;
-    background-color: #ffe8d5;
-    z-index: 10;
+.header {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100px auto 1fr;
+      grid-template-columns: 100px auto 1fr;
+  margin: 0 50px;
+  border-bottom: 1px solid #808080;
+  background-color: #ffe8d5;
+  z-index: 10;
 }
 
-.header--sticky{
-    position: sticky;
-    top: 0;
+.header--sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
 }
 
-.header__photo-of-me{
-   width: 100%;
-    border-radius: 50%;
-    place-self: center center;
+.header__photo-of-me {
+  width: 100%;
+  border-radius: 50%;
+  place-self: center center;
 }
 
-.header__name{ 
-    font-family: 'Nunito', sans-serif;
-    font-size: 30px;
-    padding: 20px;
-    margin: 0;
-    color: #0a0808b7;
-    align-self: center;
+.header__name {
+  font-family: "Nunito", sans-serif;
+  font-size: 30px;
+  padding: 20px;
+  margin: 0;
+  color: #1e3575;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.nav{
-    padding-left: 0;
-    justify-self: end;
-    margin: 25px 0;
+.nav {
+  padding-left: 0;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  margin: 25px 0;
 }
 
-.nav__item{
-    display: inline-block;
-    padding: 20px;
-    font-family: 'Nunito', sans-serif;
-    font-size: 20px;
-    margin: 0;
+.nav__item {
+  display: inline-block;
+  padding: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  margin: 0;
 }
 
-.nav__link{
-    text-decoration: none;
-    color: #000000;
+.nav__link {
+  text-decoration: none;
+  color: #000000;
 }
 
-.nav__link:hover{
-    font-weight: bold;
- }
-
-.content{
-   padding: 100px 200px 15px 200px;  
-    z-index: 5;
+.nav__link:hover {
+  font-weight: bold;
 }
 
-.introduction{
-    padding-bottom: 75px;
-    border-bottom: 1px solid grey;
+.content {
+  padding: 100px 200px 15px 200px;
+  z-index: 5;
 }
 
-.personal-card{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 10%;
+.introduction {
+  padding: 75px 0;
+  border-bottom: 1px solid #808080;
 }
 
-.short-info{
-    font-family: 'Poppins', sans-serif;
-    text-align: justify;
-    margin: 0;
+.personal-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 10%;
+  color: #2e2e2e;
+  text-align: justify;
+  letter-spacing: 0.5px;
 }
 
-.contact--highlighted{
-    background-color:#e0b1af;
+.short-info {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.contact--highlighted {
+  background-color: #e0b1af;
 }
 
 .email,
 .phone,
-.linkedin{
-    padding: 10px;
-    display:grid;
-    grid-template-areas: 
-    "icon email"
-    "icon phone"
-    "icon linkedin";
-    grid-template-columns: 30% 1fr;
-    align-items: center;
-    column-gap: 5%;
+.linkedin {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 1fr;
+      grid-template-columns: 30% 1fr;
+  gap: 5%;
+  color: #2e2e2e;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  padding: 10px;
+      grid-template-areas: "icon email" "icon phone" "icon linkedin";
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.phone__text {
+  font-family: "Poppins", sans-serif;
+  margin: 16px;
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.email__odkaz,
+.linkedin__odkaz {
+  font-family: "Poppins", sans-serif;
+  margin: 16px;
+  -ms-grid-column-align: start;
+      justify-self: start;
+  text-decoration: none;
+  color: black;
 }
 
 .phone__icon,
 .email__icon,
-.linkedin__icon{
-    max-width: 15%;
-    justify-self: end;
+.linkedin__icon {
+  max-width: 15%;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
-.phone__text{
-    font-family: 'Poppins', sans-serif;
-    margin: 16px;
-    justify-self: start;
+.CV-btn {
+  padding: 20px 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  position: relative;
+  right: 30px;
+  bottom: 15px;
 }
 
-.email__odkaz,
-.linkedin__odkaz{
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    color: black;
-    margin: 16px;
-    justify-self: start;
+.about-me {
+  padding: 75px 0;
+  border-bottom: 1px solid #808080;
 }
 
-.CV-btn{
-    padding: 20px 40px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
+.about-me__heading {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  margin-bottom: 25px;
+  color: #1e3575;
+}
+
+.career {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 10%;
+  color: #2e2e2e;
+  text-align: justify;
+  letter-spacing: 0.5px;
+}
+
+.career__short-info {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+.work-experience {
+  padding: 75px 0;
+  border-bottom: 1px solid #808080;
+}
+
+.work-experience__heading {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  margin-bottom: 25px;
+  color: #1e3575;
+}
+
+.work-experience__item {
+  font-family: "Poppins", sans-serif;
+  padding: 5px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.work-experience__1,
+.work-experience__2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 10%;
+  color: #2e2e2e;
+  text-align: justify;
+  letter-spacing: 0.5px;
+  margin-bottom: 50px;
+}
+
+.skills {
+  font-family: "Poppins", sans-serif;
+}
+
+.skills--highlighted {
+  background-color: #e0b1af;
+}
+
+.skills__item {
+  padding: 20px;
+}
+
+.get-in-touch {
+  padding: 75px 0;
+  border-bottom: 1px solid #808080;
+  position: relative;
+}
+
+.get-in-touch__heading {
+  font-family: "Nunito", sans-serif;
+  margin: 0;
+  margin-bottom: 25px;
+  color: #1e3575;
+}
+
+.get-in-touch__form {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "name email" "phone subject" "text text";
+}
+
+#name {
+  padding: 20px;
+  margin: 10px 10px 10px 0;
+  font-family: "Nunito", sans-serif;
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: name;
+}
+
+#email {
+  padding: 20px;
+  margin: 10px 10px 10px 0;
+  font-family: "Nunito", sans-serif;
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: email;
+}
+
+#phone {
+  padding: 20px;
+  margin: 10px 10px 10px 0;
+  font-family: "Nunito", sans-serif;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: phone;
+}
+
+#subject {
+  padding: 20px;
+  margin: 10px 10px 10px 0;
+  font-family: "Nunito", sans-serif;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: subject;
+}
+
+#text {
+  padding: 20px;
+  margin: 10px 10px 10px 0;
+  font-family: "Nunito", sans-serif;
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: text;
+}
+
+.form-btn {
+  padding: 20px 40px;
+  font-family: "Poppins", sans-serif;
+  font-weight: bold;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  -ms-grid-column-align: left;
+      justify-self: left;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  margin-left: 0;
+}
+
+.footer__text {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .content {
+    padding: 0 50px;
+  }
+  header {
+    margin: 0;
+  }
+  .header--sticky {
     position: relative;
-    right:30px;
-    bottom:15px;
-}
-
-.CV-btn--highlighted{
-    border: 1px solid grey;
-}
-
-.about-me{
-    padding:75px 0;
-    border-bottom: 1px solid grey;
-}
-
-.about-me__heading{
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    margin-bottom:25px;
-}
-
-.career{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 10%;
-}
-
-.career__short-info{
-    font-family: 'Poppins', sans-serif;
-    text-align: justify;
-    margin: 0;
-}
-
-.work-experience{
-    padding:75px 0;
-    border-bottom: 1px solid grey;
-}
-
-.work-experience__heading{
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-    margin-bottom:25px;
-}
-
-.skills{
-    font-family: 'Poppins', sans-serif;
-}
-
-.skills--highlighted{
-    background-color:#e0b1af;
-}
-
-.skills__item{
-    padding:20px
-}
-
-.experience__heading{
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-    margin-bottom:25px;
-}
-
-.work__experience-1,
-.work__experience-2{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 10%;
-    margin-bottom: 50px;
-}
-
-.work__experience-item{
-    font-family: 'Poppins', sans-serif;
-    padding:5px;
-    padding-left: 0;
-    list-style-type:none;
-}
-
-.get-in-touch{
-    padding: 75px 0;
-    border-bottom: 1px solid grey;
-    position: relative; 
-}
-
-.get-in-touch__form{
-    display: grid;
-    grid-template-areas: 
-    "name email"
-    "phone subject"
-    "text text";
-}
-
-.get-in-touch__heading{
-    font-family: 'Nunito', sans-serif;
-    margin: 0;
-    margin-bottom:25px;
-}
-
-#name{
-    grid-area: name;
-    padding: 20px;
-    margin: 10px 10px 10px 0;
-    font-family: 'Nunito', sans-serif;
-}
-
-#email{
-    grid-area:email; 
-    padding: 20px;
-    margin: 10px 10px 10px 0;
-    font-family: 'Nunito', sans-serif; 
-}
-
-#phone{
-    grid-area: phone;
-    padding: 20px;
-    margin: 10px 10px 10px 0;
-    font-family: 'Nunito', sans-serif;
-}
-
-#subject{
-    grid-area: subject;
-    padding: 20px;
-    margin: 10px 10px 10px 0;
-    font-family: 'Nunito', sans-serif;
-}
-
-#text{
-    grid-area: text;
-    padding: 20px;
-    font-family: 'Nunito', sans-serif;
-    margin: 10px 10px 10px 0;
-}
-
-.form-btn{
-    grid-column-start: 1;
-    justify-self: left;
-    padding: 20px 40px;
-    font-family: 'Poppins', sans-serif;
-    font-weight: bold;
-    margin: 20px 20px 20px 0;
-}
-
-.footer__text{
-    font-family: 'Poppins', sans-serif;
+  }
+  .header__photo-of-me {
+    max-width: 25%;
+    padding: 25px;
+    -ms-grid-column-span: 3;
+        grid-column-end: span 3;
+  }
+  .header__name {
+    padding: 0;
     text-align: center;
-}
-@media screen and (max-width: 1000px){
-
-    .content{
-        padding:0 50px;
-    }
-
-    header{
-        margin:0;  
-    }
-
-    .header--sticky{
-        position: relative;
-    }
-
-    .header__photo-of-me{
-        max-width: 25%;
-        padding: 25px;
+    -ms-grid-column-span: 3;
         grid-column-end: span 3;
-    }
-
-    .header__name{
-        padding: 0;
-        text-align: center;
+  }
+  .nav {
+    padding: 0;
+    -ms-grid-column-span: 3;
         grid-column-end: span 3;
-    }
-
-    .nav{
-        padding:0;
-        grid-column-end: span 3;
+    -ms-grid-column-align: center;
         justify-self: center;
-
-    }
-
-    .nav__item{
-        display: block;
-        text-align: center;
-        padding: 10px 0;
-    }
-
-    .introduction{
-        margin-top:75px;
-    }
-
-    .get-in-touch__form{
-        justify-content: stretch;
-        grid-template-areas: 
-        "name"
-        "email"
-        "phone"
-        "subject"
-        "text";
-        grid-template-columns:100%
-    }
+  }
+  .nav__item {
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+  }
+  .introduction {
+    margin-top: 75px;
+  }
+  .get-in-touch__form {
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+        grid-template-areas: "name" "email" "phone" "subject" "text";
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
 }
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
+/*# sourceMappingURL=style.css.map */
