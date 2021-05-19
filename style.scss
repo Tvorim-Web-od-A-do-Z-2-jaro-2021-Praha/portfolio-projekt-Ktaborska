@@ -1,0 +1,321 @@
+$mainColor: #ffe8da;
+$highlightColor: #e0b1af;
+$textFont:'Poppins', sans-serif;
+$headingFont: 'Nunito', sans-serif;
+$itemPadding:20px;
+$textColor:#2e2e2e;
+$headingColor:rgb(30, 53, 117);
+$textspacing:0.5px;
+$zeroMargin:0;
+$textAlign:justify;
+
+$sectionBorder:1px solid #808080;
+
+@mixin sections {
+    padding:75px 0;
+    border-bottom: $sectionBorder;
+}
+
+@mixin  subSection($display, $columnTemplate, $gap) {
+    display: $display;
+    grid-template-columns:$columnTemplate;
+    gap:$gap;
+    color: $textColor;
+    text-align: $textAlign;
+    letter-spacing: $textspacing;
+}
+
+@mixin headingSection {
+    font-family: $headingFont;
+    margin: $zeroMargin;
+    margin-bottom:25px;
+    color: $headingColor;
+}
+
+@mixin formCells {
+    padding: $itemPadding;
+    margin:10px 10px 10px 0;
+    font-family: $headingFont;
+}
+
+@mixin btn {
+    padding: 20px 40px;
+    font-family: $textFont;
+    font-weight: bold;
+}
+
+@mixin contacts {
+    font-family: $textFont;
+    margin: 16px;
+    justify-self: start;
+}
+
+@mixin contactIcon {
+    max-width: 15%;
+    justify-self: end;
+}
+
+body{
+    margin:$zeroMargin;
+    background-color: $mainColor;
+}
+
+.header{
+    display: grid;
+    grid-template-columns: 100px auto 1fr;
+    margin: 0 50px;
+    border-bottom: $sectionBorder;
+    background-color: #ffe8d5;
+    z-index: 10;
+        &--sticky{
+            position: sticky;
+            top: 0;
+        }
+        &__photo-of-me{
+            width: 100%;
+            border-radius: 50%;
+            place-self: center center;
+        }
+        &__name{
+            font-family: $headingFont;
+            font-size: 30px;
+            padding: $itemPadding;
+            margin: $zeroMargin;
+            color: $headingColor;
+            align-self: center;
+        }
+}
+
+.nav{
+    padding-left: 0;
+    justify-self: end;
+    margin: 25px 0;
+    &__item{
+        display: inline-block;
+        padding: $itemPadding;
+        font-family: $headingFont;
+        font-size: 20px;
+        margin: $zeroMargin;
+    }
+    &__link{
+        text-decoration: none;
+        color: #000000;
+        &:hover{
+            font-weight: bold;
+        }
+    }
+}
+
+.content{
+    padding: 100px 200px 15px 200px;  
+    z-index: 5;
+}
+ 
+.introduction{
+    @include sections();
+}
+
+.personal-card{
+    @include subSection(grid,repeat(auto-fit, minmax(350px, 1fr)), 10% );
+}
+
+.short-info{
+    font-family: $textFont;
+    margin: $zeroMargin;
+}
+
+.contact--highlighted{
+    background-color:$highlightColor;
+}
+
+.email,
+.phone,
+.linkedin{
+    @include subSection(grid,30% 1fr, 5%);
+    padding: 10px;
+    grid-template-areas: 
+    "icon email"
+    "icon phone"
+    "icon linkedin";
+    align-items: center;
+}
+
+.phone__text{
+    @include contacts();
+}
+
+.email__odkaz,
+.linkedin__odkaz{
+    @include contacts();
+    text-decoration: none;
+    color: black;
+}
+
+.phone__icon,
+.email__icon,
+.linkedin__icon{
+    @include contactIcon();
+}
+
+.CV-btn{
+    @include btn();
+    position: relative;
+    right:30px;
+    bottom:15px;
+}
+
+.about-me{
+    @include sections();
+    &__heading{
+        @include headingSection;
+    }
+}
+
+.career{
+    @include subSection(grid,repeat(auto-fit, minmax(350px, 1fr)), 10% );
+    &__short-info{
+        font-family: $textFont;
+        margin: $zeroMargin;
+    }
+}
+
+.work-experience{
+    @include sections();
+    &__heading{
+        @include headingSection;
+    }
+    &__item{
+        font-family: $textFont;
+        padding:5px;
+        padding-left: 0;
+        list-style-type:none;
+    }
+}
+
+.work-experience__1,
+.work-experience__2{
+    @include subSection(grid,repeat(auto-fit, minmax(350px, 1fr)), 10% );
+    margin-bottom: 50px;
+}
+
+.skills{
+    font-family: $textFont;
+    &--highlighted{
+        background-color:$highlightColor;
+    }
+    &__item{
+        padding:$itemPadding;
+    }
+}
+
+.get-in-touch{
+    @include sections();
+    position: relative; 
+    &__heading{
+        @include headingSection;
+    }
+    &__form{
+        display: grid;
+        grid-template-areas: 
+        "name email"
+        "phone subject"
+        "text text";
+    }
+}
+
+#name{
+    @include formCells();
+    grid-area: name;
+}
+
+#email{
+    @include formCells();
+    grid-area: email;
+}
+
+#phone{
+    @include formCells();
+    grid-area: phone;
+}
+
+#subject{
+    @include formCells();
+    grid-area: subject;
+}
+
+#text{
+    @include formCells();
+    grid-area: text;
+}
+
+.form-btn{
+    @include btn();
+    grid-column-start: 1;
+    justify-self: left;
+    margin:{
+        top:20px;
+        right: 20px;
+        bottom: 20px;
+        left: 0;
+    }
+}
+
+.footer__text{
+    font-family: $textFont;
+    text-align: center;
+}
+
+@media screen and (max-width: 1000px){
+
+    .content{
+        padding:0 50px;
+    }
+
+    header{
+        margin:$zeroMargin;  
+    }
+
+    .header--sticky{
+        position: relative;
+    }
+
+    .header__photo-of-me{
+        max-width: 25%;
+        padding: 25px;
+        grid-column-end: span 3;
+    }
+
+    .header__name{
+        padding: 0;
+        text-align: center;
+        grid-column-end: span 3;
+    }
+
+    .nav{
+        padding:0;
+        grid-column-end: span 3;
+        justify-self: center;
+
+    }
+
+    .nav__item{
+        display: block;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .introduction{
+        margin-top:75px;
+    }
+
+    .get-in-touch__form{
+        justify-content: stretch;
+        grid-template-areas: 
+        "name"
+        "email"
+        "phone"
+        "subject"
+        "text";
+        grid-template-columns:100%
+    }
+}
