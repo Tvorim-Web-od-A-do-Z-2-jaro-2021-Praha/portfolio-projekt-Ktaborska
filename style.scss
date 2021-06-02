@@ -1,22 +1,26 @@
+/*colors*/
 $mainColor: #ffe8da;
 $highlightColor: #e0b1af;
+$textColor:#2e2e2e;
+$headingColor:#1e3575;
+
+/*text styles*/
 $textFont:'Poppins', sans-serif;
 $headingFont: 'Nunito', sans-serif;
-$itemPadding:20px;
-$textColor:#2e2e2e;
-$headingColor:rgb(30, 53, 117);
 $textspacing:0.5px;
-$zeroMargin:0;
 $textAlign:justify;
 
+/*box model*/
+$itemPadding:1.25rem ;
+$zeroMargin:0;
 $sectionBorder:1px solid #808080;
 
 @mixin sections {
-    padding:75px 0;
+    padding:4.5rem 0;
     border-bottom: $sectionBorder;
 }
 
-@mixin  subSection($display, $columnTemplate, $gap) {
+@mixin subSection($display, $columnTemplate, $gap) {
     display: $display;
     grid-template-columns:$columnTemplate;
     gap:$gap;
@@ -28,100 +32,113 @@ $sectionBorder:1px solid #808080;
 @mixin headingSection {
     font-family: $headingFont;
     margin: $zeroMargin;
-    margin-bottom:25px;
+    margin-bottom:1.5rem;
     color: $headingColor;
 }
 
 @mixin formCells {
     padding: $itemPadding;
-    margin:10px 10px 10px 0;
+    margin:0.7rem 0.7rem 0.7rem 0;
     font-family: $headingFont;
 }
 
 @mixin btn {
-    padding: 20px 40px;
+    padding: 1.25rem 2.5rem;
     font-family: $textFont;
+    border-radius: 2%;
+    cursor: pointer;
+}
+
+@mixin btnAnimation {
+    border: 1px solid $textColor;
+    background-color: #ffe8da;
+    box-shadow:1px 1px 0 #e0b1af, 2px 2px 0 #e0b1af, 3px 3px 0 #e0b1af, 4px 4px 0 #e0b1af, 5px 5px 0 #e0b1af;
+    transition: all 0.1s linear;
+}
+
+@mixin btnHover{
     font-weight: bold;
+    box-shadow:1px 1px 0 #e0b1af, 2px 2px 0 #e0b1af, 3px 3px 0 #e0b1af, 4px 4px 0 #e0b1af, 5px 5px 0 #e0b1af, 6px 6px 0 #e0b1af, 7px 7px 0 #e0b1af, 8px 8px 0 #e0b1af, 8px 8px 0 #e0b1af, 9px 9px 0 #e0b1af, 10px 10px 0 #e0b1af;
+    transform:translate3d(-5px, -5px, -5px);
 }
 
 @mixin contacts {
     font-family: $textFont;
-    margin: 16px;
-    justify-self: start;
+    margin: 1rem;
+    color:$textColor;
 }
 
-@mixin contactIcon {
-    max-width: 15%;
-    justify-self: end;
-}
+/*mobile*/
 
-body{
+html, body{
     margin:$zeroMargin;
+    padding: 0;
     background-color: $mainColor;
+    font-size: 100%;
 }
 
 .header{
-    display: grid;
-    grid-template-columns: 100px auto 1fr;
-    margin: 0 50px;
+    margin:$zeroMargin;
     border-bottom: $sectionBorder;
-    background-color: #ffe8d5;
-    z-index: 10;
-        &--sticky{
-            position: sticky;
-            top: 0;
-        }
-        &__photo-of-me{
-            width: 100%;
-            border-radius: 50%;
-            place-self: center center;
-        }
-        &__name{
-            font-family: $headingFont;
-            font-size: 30px;
-            padding: $itemPadding;
-            margin: $zeroMargin;
-            color: $headingColor;
-            align-self: center;
-        }
+    &--sticky{
+        position: relative;
+    }
+    &__photo-of-me{
+        max-width: 50%;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto;
+        padding: $itemPadding;
+    }
+    &__name{
+        font-family: $headingFont;
+        font-size: 2rem;
+        padding: $itemPadding;
+        margin: $zeroMargin;
+        color: $headingColor;
+        text-align: center;
+    }
 }
 
 .nav{
+    margin: 1.5rem 7rem;
     padding-left: 0;
-    justify-self: end;
-    margin: 25px 0;
+
     &__item{
-        display: inline-block;
+        list-style-type: none;
         padding: $itemPadding;
         font-family: $headingFont;
-        font-size: 20px;
-        margin: $zeroMargin;
+        font-size: 1.3rem;
+        text-align: center;
     }
     &__link{
         text-decoration: none;
         color: #000000;
+        display: block;
+        padding: 1.25rem;
+    &--highlighted{
+        border: 2px solid #e0b1af;
+        }
         &:hover{
-            font-weight: bold;
+            background-color: rgb(167, 167, 248);
+            border: none;
         }
     }
 }
 
 .content{
-    padding: 100px 200px 15px 200px;  
-    z-index: 5;
-}
- 
-.introduction{
-    @include sections();
+    padding:2rem; 
 }
 
-.personal-card{
-    @include subSection(grid,repeat(auto-fit, minmax(350px, 1fr)), 10% );
+.introduction{
+    @include sections();
 }
 
 .short-info{
     font-family: $textFont;
     margin: $zeroMargin;
+    text-align: $textAlign;
+    margin-bottom: 1.6rem;
 }
 
 .contact--highlighted{
@@ -131,37 +148,46 @@ body{
 .email,
 .phone,
 .linkedin{
-    @include subSection(grid,30% 1fr, 5%);
-    padding: 10px;
-    grid-template-areas: 
-    "icon email"
-    "icon phone"
-    "icon linkedin";
-    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.phone__icon,
+.email__icon,
+.linkedin__icon{
+    max-width:5%;
+    padding:$itemPadding; 
 }
 
 .phone__text{
     @include contacts();
+    flex-basis: 55%;
+    align-self: center;
 }
 
 .email__odkaz,
 .linkedin__odkaz{
     @include contacts();
     text-decoration: none;
-    color: black;
-}
-
-.phone__icon,
-.email__icon,
-.linkedin__icon{
-    @include contactIcon();
+    flex-basis: 55%;
+    align-self: center;
 }
 
 .CV-btn{
-    @include btn();
-    position: relative;
-    right:30px;
-    bottom:15px;
+    @include btn();  
+    display: block;
+    margin:0 auto;
+    margin-top: 1.6rem;
+    &--animation{
+        @include btnAnimation();
+    }
+        &:hover{
+            @include btnHover();
+        }
+}
+
+#omne{
+    display: hidden;
 }
 
 .about-me{
@@ -172,30 +198,11 @@ body{
 }
 
 .career{
-    @include subSection(grid,repeat(auto-fit, minmax(350px, 1fr)), 10% );
     &__short-info{
         font-family: $textFont;
         margin: $zeroMargin;
+        text-align: $textAlign; 
     }
-}
-
-.work-experience{
-    @include sections();
-    &__heading{
-        @include headingSection;
-    }
-    &__item{
-        font-family: $textFont;
-        padding:5px;
-        padding-left: 0;
-        list-style-type:none;
-    }
-}
-
-.work-experience__1,
-.work-experience__2{
-    @include subSection(grid,repeat(auto-fit, minmax(350px, 1fr)), 10% );
-    margin-bottom: 50px;
 }
 
 .skills{
@@ -208,55 +215,77 @@ body{
     }
 }
 
-.get-in-touch{
+.figure-animation{
+    display: none;
+}
+
+#workexperience{
+    display: hidden;
+}
+
+.work-experience{
     @include sections();
-    position: relative; 
     &__heading{
         @include headingSection;
     }
-    &__form{
-        display: grid;
-        grid-template-areas: 
-        "name email"
-        "phone subject"
-        "text text";
+    &__item{
+        font-family: $textFont;
+        padding-left: 0;
+        list-style-type:none;
     }
 }
 
-#name{
-    @include formCells();
-    grid-area: name;
+.work-experience__1,
+.work-experience__2{
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+    }
+
+.work-experience__item{
+    flex-basis:50%;
 }
 
-#email{
-    @include formCells();
-    grid-area: email;
+#getintouch{
+    display: hidden;
 }
 
-#phone{
-    @include formCells();
-    grid-area: phone;
+#text-animation{
+    animation: bouncing 1s infinite alternate;
 }
 
-#subject{
-    @include formCells();
-    grid-area: subject;
+@keyframes bouncing {
+    from{
+        transform: scale(1)  
+    }
+    to{
+        transform: scale(1.1)
+    }
 }
 
+.get-in-touch{
+    @include sections();
+    &__form{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+#name,
+#email,
+#phone,
+#subject,
 #text{
     @include formCells();
-    grid-area: text;
 }
 
 .form-btn{
     @include btn();
-    grid-column-start: 1;
-    justify-self: left;
-    margin:{
-        top:20px;
-        right: 20px;
-        bottom: 20px;
-        left: 0;
+    &--animation{
+        @include btnAnimation();
+    }
+    &:hover{
+        @include btnHover();
     }
 }
 
@@ -265,57 +294,218 @@ body{
     text-align: center;
 }
 
-@media screen and (max-width: 1000px){
+/*TABLET*/
 
-    .content{
-        padding:0 50px;
-    }
-
-    header{
-        margin:$zeroMargin;  
-    }
-
-    .header--sticky{
-        position: relative;
-    }
-
-    .header__photo-of-me{
-        max-width: 25%;
-        padding: 25px;
-        grid-column-end: span 3;
-    }
-
-    .header__name{
-        padding: 0;
-        text-align: center;
-        grid-column-end: span 3;
+@media (min-width:600px){
+    
+    .header{
+        &__medium{
+           display: flex;
+           justify-content: center;
+        }
+        &__photo-of-me{
+            max-width: 20%;
+            margin: $zeroMargin;
+        } 
+        &__name{
+            align-self: center; 
+        }
     }
 
     .nav{
-        padding:0;
-        grid-column-end: span 3;
-        justify-self: center;
-
+        margin: 1.5rem 0;
+        display: flex;
+        justify-content: center;
+        &__item{
+            align-self: center;
+        }
     }
 
-    .nav__item{
-        display: block;
-        text-align: center;
-        padding: 10px 0;
+    .personal-card{
+        @include subSection(grid,repeat(auto-fit, minmax(360px, 1fr)), 5% );
     }
 
-    .introduction{
-        margin-top:75px;
-    }
-
-    .get-in-touch__form{
-        justify-content: stretch;
+    .email,
+    .phone,
+    .linkedin{
+        @include subSection(grid,20% 1fr, 5%);
+        padding: 0.5rem;
         grid-template-areas: 
-        "name"
-        "email"
-        "phone"
-        "subject"
-        "text";
-        grid-template-columns:100%
+        "icon email"
+        "icon phone"
+        "icon linkedin";
+        align-items: center;
+    }
+
+    .phone__icon,
+    .email__icon,
+    .linkedin__icon{
+        max-width: 30%;
+        justify-self: end;
+    }
+
+    .career{
+        @include subSection(grid,repeat(auto-fit, minmax(360px, 1fr)), 5% );
+    }
+    
+    .work-experience__1,
+    .work-experience__2{
+        @include subSection(grid,repeat(auto-fit, minmax(200px, 1fr)), 10% );
+    }
+
+    .get-in-touch{
+        &__form{
+            display: grid;
+            grid-template-areas: 
+            "name email"
+            "phone subject"
+            "text text";
+        }
+    }
+    
+    #name{
+        grid-area: name;
+    }
+
+    #email{
+        grid-area: email;
+    }
+
+    #phone{
+        grid-area: phone;
+    }
+
+    #subject{
+        grid-area: subject;
+    }
+
+    #text{
+        grid-area: text;
+    }
+
+.form-btn{
+    grid-column-start: 1;
+    justify-self: left;
+    margin:{
+        top:1.25rem;
+        right: 1.25rem;
+        bottom: 1.25rem;
+        left: 0;
+    }
+}
+
+/*PC*/
+
+@media (min-width: 1200px){
+
+    html{
+        font-size: 105%;
+    }
+
+    .header{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+       
+        background-color: #ffe8d5;
+        z-index: 10;
+            &--sticky{
+                position: sticky;
+                top: 0;
+            }
+            &__photo-of-me{
+                max-width: 120px;
+                height: auto;
+                padding: 1.5rem 0; 
+            }
+    }
+
+    .nav{
+        margin: 1.5rem 0;
+        &__item{
+            display: inline-block;
+        }
+    }
+
+    .content{
+        padding: 0 12.5rem 1rem 12.5rem;  
+        z-index: 5;
+    }
+
+    .personal-card{
+        @include subSection(grid,repeat(auto-fit, minmax(360px, 1fr)), 10% );
+    }
+
+    #omne{
+        visibility: hidden;
+        position: relative;
+        top: -200px;
+    }
+    
+    .CV-btn{
+        @include btn();
+        position: relative;
+        right:40px;
+        bottom:40px;
+        display: inline-block;
+    }
+
+    .CV-icon{
+        width: 178.233px;
+        height:69px;
+        position: relative;
+        right:40px;
+        bottom:40px;
+        display: inline-block;
+    }
+
+    .CV-icon img{
+        max-width: 5%;
+    }
+
+    .figure-animation{
+        display: block;
+    }
+
+    .career{
+        @include subSection(grid,repeat(auto-fit, minmax(200px, 1fr)), 10% );
+    }
+
+    .animation{
+        position: relative;
+        z-index: 0;
+    }
+
+    .figure-animation{
+        position: absolute;
+        top:-30%;
+        left:-20%;
+        z-index: 1;
+    }
+
+    #head{
+        animation: figure 1s infinite alternate;
+        transform-origin: bottom;
+        transform-box: fill-box;
+    }
+
+    @keyframes figure {
+        from{
+            transform: rotateZ(-5deg)
+        }
+        to{
+            transform: rotateZ(10deg)
+        }
+    }
+
+    #workexperience{
+        visibility: hidden;
+        position: relative;
+        top: -200px;
+    }
+
+    #getintouch{
+        visibility: hidden;
+        position: relative;
+        top: -200px;
     }
 }
